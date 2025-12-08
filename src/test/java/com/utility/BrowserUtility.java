@@ -15,6 +15,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.constants.Browser;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public abstract class BrowserUtility {
 	private WebDriver driver;
 
@@ -31,6 +33,8 @@ public abstract class BrowserUtility {
 	{
 		if(browserName.equals("chrome"))
 		{
+
+	        WebDriverManager.chromedriver().setup(); // auto-downloads & configures
 			driver = new ChromeDriver();
 		}
 		else if(browserName.equals("edge"))
