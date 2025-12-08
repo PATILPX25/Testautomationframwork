@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="com.ui.test.LoginTest"/>
+      <class name="com.ui.CiChrome"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
