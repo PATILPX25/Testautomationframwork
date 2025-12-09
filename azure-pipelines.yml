@@ -1,6 +1,12 @@
+trigger: none   # Disable CI trigger if you only want scheduled runs
 
-trigger:
-- master
+schedules:
+- cron: "*/10 * * * *"    # Every 10 minutes
+  displayName: "Run every 10 minutes"
+  branches:
+    include:
+      - master
+  always: true            # Run even if no code change
 
 pool:
   vmImage: ubuntu-latest
